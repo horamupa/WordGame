@@ -88,9 +88,9 @@ class GameViewModel: ObservableObject {
         words.append(result)
         
         if isFirst {
-            player1.add(score: words.count)
+            player1.score += result.count
         } else {
-            player2.add(score: words.count)
+            player2.score += result.count
         }
         
         isFirst.toggle()

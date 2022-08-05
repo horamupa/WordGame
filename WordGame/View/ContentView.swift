@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+//    var viewModel = GameViewModel(player1: <#T##Player#>, player2: <#T##Player#>, word: <#T##String#>)
+    
     @State var isShowedGame = false
     
     @State private var longWord: String = ""
@@ -50,7 +52,7 @@ struct ContentView: View {
                 .ignoresSafeArea()
         )
         .fullScreenCover(isPresented: $isShowedGame) {
-            GameView()
+            GameView(viewModel: GameViewModel(player1: Player(name: name1), player2: Player(name: name2), word: longWord))
         }
     }
 }

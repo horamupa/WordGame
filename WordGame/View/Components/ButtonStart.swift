@@ -12,7 +12,6 @@ struct ButtonStart: View {
     var body: some View {
         Button {
             print("Game Start")
-            ContentView.init(isShowedGame: true)
         } label: {
             Text("Start")
                 .padding()

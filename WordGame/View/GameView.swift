@@ -11,12 +11,17 @@ struct GameView: View {
     
     @State private var answer: String = ""
     
+    var viewModel: GameViewModel
+    
     var body: some View {
         VStack(spacing: 25) {
             HStack {
                 Spacer()
                 Button {
                     print("Exit")
+//                    let view1 = ContentView()
+//                    view1.isShowedGame = false
+                    
                 } label: {
                     Text("Выход")
                         .padding(6)
@@ -30,16 +35,16 @@ struct GameView: View {
                 
             }.padding()
             
-            Text("ДлинноеСлово")
+            Text(viewModel.word)
                 .font(.custom(mainFont, size: 30))
                 .foregroundColor(.white)
             
             HStack(spacing: 12) {
                
                 VStack {
-                    Text("0")
+                    Text("\(viewModel.player1.score)")
                         .font(.custom(mainFont, size: 60))
-                    Text("Vasya")
+                    Text(viewModel.player1.name)
                 }
                 .padding(20)
                 .frame(width: screen.width / 2.2, height: screen.width / 2.2)
@@ -48,9 +53,9 @@ struct GameView: View {
                 .shadow(color: .white, radius: 10)
                 
                 VStack {
-                    Text("0")
+                    Text("\(viewModel.player2.score)")
                         .font(.custom(mainFont, size: 60))
-                    Text("Petya")
+                    Text(viewModel.player2.name)
                 }
                 .padding(20)
                 .frame(width: screen.width / 2.2, height: screen.width / 2.2)
@@ -66,7 +71,12 @@ struct GameView: View {
                 
             Button {
                 print("Go")
-                self.answer = ""
+                let score = viewModel.check(word: answer)
+                if score > 0 {
+                    self.answer = ""
+                }
+                
+                
             } label: {
                 Text("Готово")
                     
@@ -105,6 +115,6 @@ struct GameView: View {
 
 struct GameView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        GameView(viewModel: GameViewModel(player1: Player(name: "Вася"), player2: Player(name: "Петя"), word: "Проститутошная"))
     }
 }
