@@ -11,6 +11,8 @@
 		8DAA917A289D2B83005DA016 /* GameTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA9179289D2B83005DA016 /* GameTextField.swift */; };
 		8DAA917C289D2F81005DA016 /* ButtonStart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA917B289D2F81005DA016 /* ButtonStart.swift */; };
 		8DAA917E289D301C005DA016 /* GameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA917D289D301C005DA016 /* GameView.swift */; };
+		8DAA9182289D47FD005DA016 /* PlayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA9181289D47FD005DA016 /* PlayerModel.swift */; };
+		8DAA9185289D490C005DA016 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DAA9184289D490C005DA016 /* GameViewModel.swift */; };
 		8DEA6C32288F13F50027E462 /* WordGameApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA6C31288F13F50027E462 /* WordGameApp.swift */; };
 		8DEA6C34288F13F50027E462 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DEA6C33288F13F50027E462 /* ContentView.swift */; };
 		8DEA6C36288F13F60027E462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8DEA6C35288F13F60027E462 /* Assets.xcassets */; };
@@ -22,6 +24,8 @@
 		8DAA9179289D2B83005DA016 /* GameTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTextField.swift; sourceTree = "<group>"; };
 		8DAA917B289D2F81005DA016 /* ButtonStart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStart.swift; sourceTree = "<group>"; };
 		8DAA917D289D301C005DA016 /* GameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameView.swift; sourceTree = "<group>"; };
+		8DAA9181289D47FD005DA016 /* PlayerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerModel.swift; sourceTree = "<group>"; };
+		8DAA9184289D490C005DA016 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		8DEA6C2E288F13F50027E462 /* WordGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WordGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DEA6C31288F13F50027E462 /* WordGameApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordGameApp.swift; sourceTree = "<group>"; };
 		8DEA6C33288F13F50027E462 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -60,6 +64,22 @@
 			path = Components;
 			sourceTree = "<group>";
 		};
+		8DAA9183289D48F3005DA016 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8DAA9181289D47FD005DA016 /* PlayerModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8DAA9186289D7831005DA016 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				8DAA9184289D490C005DA016 /* GameViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		8DEA6C25288F13F50027E462 = {
 			isa = PBXGroup;
 			children = (
@@ -80,6 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				8DEA6C31288F13F50027E462 /* WordGameApp.swift */,
+				8DAA9186289D7831005DA016 /* ViewModel */,
+				8DAA9183289D48F3005DA016 /* Model */,
 				8DAA9175289D23A2005DA016 /* View */,
 				8DEA6C35288F13F60027E462 /* Assets.xcassets */,
 				8DEA6C37288F13F60027E462 /* Preview Content */,
@@ -167,7 +189,9 @@
 			files = (
 				8DEA6C34288F13F50027E462 /* ContentView.swift in Sources */,
 				8DAA917A289D2B83005DA016 /* GameTextField.swift in Sources */,
+				8DAA9182289D47FD005DA016 /* PlayerModel.swift in Sources */,
 				8DAA917C289D2F81005DA016 /* ButtonStart.swift in Sources */,
+				8DAA9185289D490C005DA016 /* GameViewModel.swift in Sources */,
 				8DAA9178289D2A65005DA016 /* TitleText.swift in Sources */,
 				8DAA917E289D301C005DA016 /* GameView.swift in Sources */,
 				8DEA6C32288F13F50027E462 /* WordGameApp.swift in Sources */,
