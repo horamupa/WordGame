@@ -17,7 +17,7 @@ struct GameTextField: View {
             .padding()
             .padding(.horizontal, 20)
             .background()
-            .frame(maxWidth: 300)
+            .frame(minHeight: 60)
             .cornerRadius(16)
     }
 }

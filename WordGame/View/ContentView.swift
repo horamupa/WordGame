@@ -9,6 +9,8 @@ import SwiftUI
 
 struct ContentView: View {
     
+    @State var isShowedGame = false
+    
     @State private var longWord: String = ""
     @State private var name1: String = ""
     @State private var name2: String = ""
@@ -18,19 +20,17 @@ struct ContentView: View {
         VStack(spacing: 20) {
             
             VStack {
-                
-                TitleText(text: "Go Fuck Yourself")
-                
+                TitleText(text: "Игра в слова")
             }.padding()
             
-            GameTextField(placeholder: "Введите длинное слово", name1: $longWord)
-            GameTextField(placeholder: "First player name", name1: $name1)
-            GameTextField(placeholder: "Second player name", name1: $name2)
+            GameTextField(placeholder: "Введите длинное слово...", name1: $longWord)
+            GameTextField(placeholder: "Имя первого игрока", name1: $name1)
+            GameTextField(placeholder: "Имя второго игрока", name1: $name2)
             
             Button {
-                print("Game Start")
+                isShowedGame.toggle()
             } label: {
-                Text("Start")
+                Text("Начать")
                     .padding()
                     .padding(.horizontal, 60)
                     .foregroundColor(.white)
@@ -41,17 +41,21 @@ struct ContentView: View {
             .padding()
 
         }
+        .padding(.horizontal, 30)
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(
-            Image("BG2")
+            Image("BG3")
                 .resizable()
+                .scaledToFill()
                 .ignoresSafeArea()
-                .aspectRatio(contentMode: .fill)
-            
-            
         )
+        .fullScreenCover(isPresented: $isShowedGame) {
+            GameView()
+        }
     }
 }
+    
+    
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {

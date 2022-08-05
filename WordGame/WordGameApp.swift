@@ -7,8 +7,14 @@
 
 import SwiftUI
 
+var mainFont = "AvenirNext-Bold"
+let screen = UIScreen.main.bounds
+
 @main
 struct WordGameApp: App {
+    
+    
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
